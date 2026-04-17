@@ -1,0 +1,7 @@
+.env
+*.pth
+__pycache__/
+venv/
+.venv/
+*.pyc
+.env.local
