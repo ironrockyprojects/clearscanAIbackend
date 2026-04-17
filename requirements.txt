@@ -4,7 +4,8 @@ opencv-contrib-python-headless==4.9.0.80
 numpy==1.26.4
 requests==2.31.0
 supabase==2.4.2
-torch==2.2.1
-torchvision==0.17.1
+torch==2.2.1+cpu
+torchvision==0.17.1+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
 python-dotenv==1.0.1
 gunicorn==21.2.0
