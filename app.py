@@ -30,19 +30,6 @@ from flask_cors import CORS
 from supabase import create_client, Client
 from dotenv import load_dotenv
 
-import urllib.request
-
-# ── Auto-download EDSR model on Railway server start ──────────
-EDSR_AUTO_URL = "https://github.com/Saafke/EDSR_Tensorflow/raw/master/models/EDSR_x4.pb"
-
-if not os.path.exists("EDSR_x4.pb"):
-    logger.info("⬇️  EDSR model not found — downloading (~23MB)...")
-    try:
-        urllib.request.urlretrieve(EDSR_AUTO_URL, "EDSR_x4.pb")
-        logger.info("✅ EDSR_x4.pb downloaded successfully")
-    except Exception as e:
-        logger.warning(f"⚠️  EDSR download failed: {e} — will use Lanczos fallback")
-
 load_dotenv()
 
 # ── Logging ───────────────────────────────────────────────────
